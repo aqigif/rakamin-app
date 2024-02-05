@@ -1,7 +1,14 @@
-import { ScrollView, Text, View,Image } from 'react-native';
+import { ScrollView, Text, View, Image, Button, Pressable, TouchableOpacity } from 'react-native';
 
 export default function TabOneScreen() {
 
+  // Scrollview
+  // View
+  // Text
+  // Image
+  // Button
+  // Touch : TouchableOpacity, Pressable : https://reactnative.dev/docs/handling-touches
+  
   return (
     <ScrollView>
       <View style={{backgroundColor: 'white'}}>
@@ -9,6 +16,7 @@ export default function TabOneScreen() {
       </View>
       <Text>Halo React Native</Text>
       {/* image from network */}
+      <TouchableOpacity onPress={() => console.log("hi hi touch")}>
       <Image
         style={{
           width: 200,
@@ -18,14 +26,18 @@ export default function TabOneScreen() {
           uri: 'https://studio.mrngroup.co/storage/app/media/Prambors/Editorial%203/meme%2010-20230523181152.webp?tr=w-600',
         }}
       />
+      </TouchableOpacity>
       {/* image from local */}
-      <Image
-        style={{
-          width: 200,
-          height: 200,
-        }}
-        source={require('../../assets/images/meme.jpeg')}
-      />
+      <Pressable onPress={() => console.log("hi hi image")}>
+        <Image
+          style={{
+            width: 200,
+            height: 200,
+          }}
+          source={require('../../assets/images/meme.jpeg')}
+        />
+      </Pressable>
+      <Button title='Press me' onPress={() => console.log("hi hi button")}/>
     </ScrollView>
   );
 }
