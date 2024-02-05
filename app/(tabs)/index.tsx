@@ -2,13 +2,14 @@ import { ScrollView, Text, View, Image, Button, Pressable, TouchableOpacity } fr
 
 export default function TabOneScreen() {
 
+  // components : https://reactnative.dev/docs/components-and-apis
   // Scrollview
   // View
   // Text
   // Image
   // Button
   // Touch : TouchableOpacity, Pressable : https://reactnative.dev/docs/handling-touches
-  
+
   return (
     <ScrollView>
       <View style={{backgroundColor: 'white'}}>
