@@ -1,4 +1,4 @@
-import { ScrollView, Text, View, Image, Button, Pressable, TouchableOpacity } from 'react-native';
+import { ScrollView, Text, View, Image, Button, Pressable, TouchableOpacity, StyleSheet } from 'react-native';
 
 export default function TabOneScreen() {
 
@@ -10,6 +10,7 @@ export default function TabOneScreen() {
   // Button
   // Touch : TouchableOpacity, Pressable, TouchableHighlight : https://reactnative.dev/docs/handling-touches
 
+  // styling
   return (
     <ScrollView>
       <View style={{backgroundColor: 'white'}}>
@@ -19,10 +20,7 @@ export default function TabOneScreen() {
       {/* image from network */}
       <TouchableOpacity onPress={() => console.log("hi hi touch")}>
       <Image
-        style={{
-          width: 200,
-          height: 200,
-        }}
+        style={styles.imageBox}
         source={{
           uri: 'https://studio.mrngroup.co/storage/app/media/Prambors/Editorial%203/meme%2010-20230523181152.webp?tr=w-600',
         }}
@@ -42,7 +40,16 @@ export default function TabOneScreen() {
       <TouchableOpacity>
         <View></View>
       </TouchableOpacity>
+
+      {/* // card */}
+      
     </ScrollView>
   );
 }
 
+const styles = StyleSheet.create({
+  imageBox: {
+    width: 200,
+    height: 200,
+  }
+})
