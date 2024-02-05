@@ -8,7 +8,7 @@ export default function TabOneScreen() {
   // Text
   // Image
   // Button
-  // Touch : TouchableOpacity, Pressable : https://reactnative.dev/docs/handling-touches
+  // Touch : TouchableOpacity, Pressable, TouchableHighlight : https://reactnative.dev/docs/handling-touches
 
   return (
     <ScrollView>
@@ -39,6 +39,9 @@ export default function TabOneScreen() {
         />
       </Pressable>
       <Button title='Press me' onPress={() => console.log("hi hi button")}/>
+      <TouchableOpacity>
+        <View></View>
+      </TouchableOpacity>
     </ScrollView>
   );
 }
