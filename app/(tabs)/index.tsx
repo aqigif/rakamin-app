@@ -1,31 +1,32 @@
-import { StyleSheet } from 'react-native';
-
-import EditScreenInfo from '@/components/EditScreenInfo';
-import { Text, View } from '@/components/Themed';
+import { ScrollView, Text, View,Image } from 'react-native';
 
 export default function TabOneScreen() {
+
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Tab One</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <EditScreenInfo path="app/(tabs)/index.tsx" />
-    </View>
+    <ScrollView>
+      <View style={{backgroundColor: 'white'}}>
+        <Text>Halo React Native</Text>
+      </View>
+      <Text>Halo React Native</Text>
+      {/* image from network */}
+      <Image
+        style={{
+          width: 200,
+          height: 200,
+        }}
+        source={{
+          uri: 'https://studio.mrngroup.co/storage/app/media/Prambors/Editorial%203/meme%2010-20230523181152.webp?tr=w-600',
+        }}
+      />
+      {/* image from local */}
+      <Image
+        style={{
+          width: 200,
+          height: 200,
+        }}
+        source={require('../../assets/images/meme.jpeg')}
+      />
+    </ScrollView>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  title: {
-    fontSize: 20,
-    fontWeight: 'bold',
-  },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: '80%',
-  },
-});
